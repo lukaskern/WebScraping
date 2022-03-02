@@ -1,4 +1,4 @@
-﻿namespace WebScrapingGPU
+﻿namespace WebScraping
 {
 	partial class WebScraper
 	{
@@ -29,11 +29,27 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+			this.SuspendLayout();
+			// 
+			// notifyIcon
+			// 
+			this.notifyIcon.Text = "notifyIcon1";
+			this.notifyIcon.Visible = true;
+			// 
+			// WebScraper
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Name = "WebScraper";
 			this.Text = "Form1";
+			this.ResumeLayout(false);
+
 		}
 
 		#endregion
+
+		private NotifyIcon notifyIcon;
 	}
 }

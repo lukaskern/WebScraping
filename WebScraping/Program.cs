@@ -1,5 +1,3 @@
-using WebScrapingGPU;
-
 namespace WebScraping
 {
 	internal static class Program

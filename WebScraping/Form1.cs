@@ -1,9 +1,8 @@
 ﻿using System.Diagnostics;
 using HtmlAgilityPack;
-using WebScraping;
 using HtmlDocument = HtmlAgilityPack.HtmlDocument;
 
-namespace WebScrapingGPU
+namespace WebScraping
 {
 	public partial class WebScraper : Form
 	{
