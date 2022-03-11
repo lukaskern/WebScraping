@@ -6,9 +6,10 @@ namespace TaskTest
 		{
 			InitializeComponent();
 			//Asynchron wenn Methode nicht async sein kann
-			Task.Run(() => 
+			Task.Run(() =>
 			{
-				//...
+				HttpResponseMessage resp = APIInterface.Get("/file/scryfall-bulk/default-cards/default-cards-20220301100243.json");
+				string json = resp.Content.ReadAsStringAsync().Result;
 			});
 		}
 

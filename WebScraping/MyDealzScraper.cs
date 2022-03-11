@@ -48,11 +48,10 @@ namespace WebScraping
 
 			HtmlDocument d = new HtmlDocument();
 			d.LoadHtml(HTML);
-
-			HtmlNode articlesNode = d.GetElementbyId("toc-target-deals").ChildNodes[0];
-			List<HtmlNode> nodes = articlesNode.ChildNodes.Where(e => e.Name == "article").ToList();
-
+			
+			List<HtmlNode> nodes = d.DocumentNode.DescendantsAndSelf().Where(e => e.Name == "article").ToList();
 			List<Row> rows = new List<Row>();
+
 			foreach (HtmlNode n in nodes)
 			{
 				List<HtmlNode> allChildren = n.DescendantsAndSelf().ToList();
